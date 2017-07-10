@@ -5,11 +5,14 @@
   "author": "Ihor Poplavskyi <igor.poplava@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node index.js",
+    "build": "webpack"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "webpack": "^3.1.0"
   }
 }
