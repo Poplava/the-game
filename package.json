@@ -5,7 +5,7 @@
   "author": "Ihor Poplavskyi <igor.poplava@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "nodemon index.js --exec babel-node --inspect 0.0.0.0:9229",
     "build": "webpack"
   },
   "dependencies": {
@@ -14,8 +14,16 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "express-session": "^1.15.3",
     "lodash": "^4.17.4",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "serve-static": "^1.12.3",

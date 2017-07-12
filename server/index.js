@@ -1,21 +1,11 @@
 import { join } from 'path';
-
 import express from 'express';
-import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
 
-import webpackConfig from '../webpack.config';
+import { SERVER_PORT } from './config';
+import init from './init';
 
 const app = express();
 
-app.use(
-  webpackMiddleware(webpack(webpackConfig), {
-    publicPath: '/assets/'
-  })
-);
+app.use(init());
 
-app.get('/', (req, res) => {
-  res.sendFile(join(__dirname, 'index.html'));
-});
-
-app.listen(3000, () => console.log('Started...'));
+app.listen(SERVER_PORT, () => console.log('Started...'));
